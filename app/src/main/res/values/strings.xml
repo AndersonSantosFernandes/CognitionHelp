@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">GaleryTeste</string>
+    <string name="buscar">Buscar Imagem</string>
+    <string name="salvar">Salvar Imagem</string>
+    <string name="sorteio">Sortear cor</string>
+    <string name="btFalar">Falar</string>
+    <string name="limpar">Limpar texto</string>
+    <string name="tituloTelaFalador">Digite o que quer ouvir</string>
+    <string name="sobreAlzheimer">
+        Estratégias para lidar com um doente de Alzheimer
+Cuidar de uma pessoa com Doença de Alzheimer pode tornar-se uma tarefa muito desafiadora e desgastante. É importante ter em consideração que as perdas cognitivas (perdas de memória, orientação espacial e temporal, linguagem, capacidade de raciocínio, concentração, entre outras) têm impacto na maneira como a pessoa vive e se relaciona.
+
+Os défices ocorridos levam a que, muitas vezes, a pessoa se esqueça ou desaprenda a forma como deve comportar-se, como pode executar uma ação rotineira, vestir-se adequadamente, ou, até mesmo, comer.
+
+Ao lidar/cuidar com um doente de Alzheimer, é importante que o cuidador tenha em consideração que a manifestação de comportamentos desafiantes (sejam eles, repetir muitas vezes uma pergunta que evidencie uma preocupação, reagir agressivamente quando anteriormente era uma pessoa gentil, manifestar comportamentos sexuais socialmente, ou usar linguagem obscena e desapropriada ao momento) não é uma escolha consciente e intencional do doente, mas sim consequência das alterações do funcionamento do cérebro perante a doença.
+
+Sugerem-se algumas estratégias para lidar eficazmente com as alterações cognitivas e comportamentais em indivíduos com Doença de Alzheimer:
+
+Ter sempre uma atitude afetuosa;
+Estabelecer o contacto visual e ouvir atentamente;
+Manter um ambiente calmo e sem ruídos;
+Recorrer à linguagem corporal para facilitar a comunicação;
+Permanecer calmo e falar de maneira clara e gentil;
+Utilizar frases curtas e simples, focando uma ideia de cada vez;
+Dar tempo à pessoa para compreender o que lhe transmitiu;
+Dizer previamente o que pretende fazer antes de a abordar (no caso de prestação de cuidados pessoais);
+Inverter frases negativas, tornando-as afirmativas (substituir “Não faça isso” por “é melhor fazer assim.”);
+Ser paciente.
+Existem ainda um conjunto de atitudes que nunca deverão ser exibidas com um doente de Alzheimer:
+
+Discutir: a pessoa não terá capacidade para perceber o que está errado e só irá agravar a situação;
+Dar ordens à pessoa;
+Dizer à pessoa o que não pode fazer. Em vez disso, deve dizer-se aquilo que ela pode fazer;
+Utilizar modos intransigentes;
+Um tom de voz arrogante pode ser apreendido mesmo que a pessoa não compreenda as palavras, o que a poderá deixar mais perturbada;
+Perguntas que apelem à utilização da memória (já que irão causar um sentimento de maior frustração no doente);
+Falar da pessoa que está presente como se ela não estivesse presente.
+Em caso de persistência de dúvidas, um médico psiquiatra ou neurologista juntamente com um psicólogo geriátrico poderão ajudá-lo.
+
+Tratamento da Doença de Alzheimer
+Embora a Doença de Alzheimer seja, atualmente, irreversível e incurável, é possível tratar os sintomas.
+
+O tratamento é feito com recurso a medicação e a diferentes tipos de terapia, no sentido de se retardar a evolução dos sintomas da demência e de controlar as alterações de comportamento associadas à doença de Alzheimer, tais como, agitação, agressividade e alterações de humor. A prescrição de fármacos visa atenuar alguns sintomas cognitivos e comportamentais da pessoa com demência, mas não a impedem de evoluir.
+
+Além da terapia farmacológica, é recomendado fazer reabilitação cognitiva, tendo maior eficácia nos estádios iniciais da demência.
+
+A reabilitação cognitiva é um tipo de intervenção em que pacientes e os seus familiares trabalham em conjunto com os profissionais de saúde com o objetivo de restituir ou compensar os défices do funcionamento cognitivo (“défices nas capacidades que permitem ao cérebro prensar”) provocados pela demência, melhorando o funcionamento do paciente no seu dia-a-dia. O seu principal objetivo passa por ajudar o paciente e os familiares a lidar, conviver, contornar e superar os danos que a doença de Alzheimer provoca, não só ao nível cognitivo, mas também nos comportamentos e no estado emocional do doente.
+
+Em fases mais avançadas, em que se regista um maior declínio do funcionamento cognitivo, os cuidados clínicos passam por psicoeducação, técnicas comportamentais, musicoterapia e suporte do cuidador.
+    </string>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Clique na cor pedida"
+        android:id="@+id/menu0"
+
+        />
+    <!--app:showAsAction="ifRoom" se o menu não couber na barra, ficarão os tres pontinhos. Se couber o menu ficará visível na propria barra-->
+    <!--app:showAsAction="always" o menu fica sempre ma barra-->
+    <!--app:showAsAction="never" o menu nunca aparece na barra-->
+
+    <item
+        android:title="Texto em viva voz"
+        android:id="@+id/menu1"
+        />
+
+    <item
+        android:title="Nome do familiar"
+        android:id="@+id/menu2"
+        />
+    <item
+        android:title="Informações"
+        android:id="@+id/menu3"
+        />
+
+</menu>
