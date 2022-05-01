@@ -32,7 +32,7 @@
             android:id="@+id/btnImage"
             android:layout_width="fill_parent"
             android:layout_height="47dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:text="@string/buscar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
             android:id="@+id/falaMain"
             android:layout_width="fill_parent"
             android:layout_height="44dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:text="@string/salvar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
             android:id="@+id/editTextTextPersonName"
             android:layout_width="fill_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:background="@color/cardview_light_background"
             android:ems="10"
             android:inputType="textMultiLine|textPersonName"
@@ -63,13 +63,37 @@
         <TextView
             android:id="@+id/tituloMain"
             android:layout_width="fill_parent"
-            android:layout_height="25dp"
+            android:layout_height="30dp"
             android:background="@color/cardview_light_background"
             android:gravity="center"
             android:text="@string/tituloFotos"
+            android:textSize="22sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonLimpar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/limpar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/falaMain" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/duvidaMain"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="296dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/interrogacao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLimpar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

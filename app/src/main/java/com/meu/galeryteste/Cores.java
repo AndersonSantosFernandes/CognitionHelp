@@ -1,13 +1,16 @@
 package com.meu.galeryteste;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.Random;
 
 public class Cores extends AppCompatActivity {
@@ -16,7 +19,7 @@ public class Cores extends AppCompatActivity {
     TextToSpeech textoFalado;//***
     Context contexto;//***
 
-    Button sorteia,btVerde,btAmarelo,btRosa,btVermelho,btAzul,btMarrom,btPreto,btCinza;
+    Button sorteia,btVerde,btAmarelo,btRosa,btVermelho,btAzul,btMarrom,btPreto,btCinza, duvida;
     int sorteado, adivinhado;
 
 
@@ -25,7 +28,7 @@ public class Cores extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cores);
-
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
 
         String verde, amarelo, rosa, vermelho, azul,marrom, preto, cinza, acertar, errar;
@@ -51,7 +54,7 @@ public class Cores extends AppCompatActivity {
         btMarrom = findViewById(R.id.marromId);
         btPreto = findViewById(R.id.pretoId);
         btCinza = findViewById(R.id.cinzaId);
-
+        duvida = findViewById(R.id.duvidaCores);
         textoFalado = new TextToSpeech(contexto, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -198,6 +201,25 @@ public class Cores extends AppCompatActivity {
             Toast.makeText(this, "Clique em sortear", Toast.LENGTH_SHORT).show();
 
         //************************* fim cores ***************************
+
+        duvida.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //*********************diálogo de ajuda
+                AlertDialog.Builder dialog = new AlertDialog.Builder(Cores.this);
+                dialog.setTitle("Ajuda");
+                dialog.setMessage("Clique em sortear cor.\n Será pedido para escolher uma, e o paciente com deficit de \n" +
+                        "    cognição deve tentar acertar.");
+                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+                dialog.create();
+                dialog.show();
+                //**********************diálogo de ajuda
+            }
+        });
     }
     public void onPause(){
         if(textoFalado != null){

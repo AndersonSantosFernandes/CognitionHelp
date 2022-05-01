@@ -9,21 +9,39 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import java.util.Random;
 
 public class CognitionHelp extends AppCompatActivity {
     private ScrollView fundo;
-    MediaPlayer abertura;
+    private MediaPlayer abertura;
+             ImageView pPause;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cognition_help);
-         abertura = MediaPlayer.create(this, R.raw.silence);
+
+
+         pPause = findViewById(R.id.playPause);
+         abertura = MediaPlayer.create(this, R.raw.audio1);
          abertura.start();
          fundo = findViewById(R.id.mainFrame);
 
-
+         pPause.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 if (abertura.isPlaying()){
+                     abertura.pause();
+                     pPause.setImageResource(R.drawable.ic_smartf);
+                 }else{
+                     abertura.start();
+                     pPause.setImageResource(R.drawable.ic_play);
+                 }
+             }
+         });
 
         Random random = new Random();
         int escolha;
@@ -93,20 +111,24 @@ public class CognitionHelp extends AppCompatActivity {
             case R.id.menu0:
                 Intent cores = new Intent(CognitionHelp.this, Cores.class);
                 startActivity(cores);
+                abertura.pause();
                 break;
 
             case R.id.menu1:
                 Intent falador = new Intent(CognitionHelp.this, Falador.class);
                 startActivity(falador);
+                abertura.pause();
                 break;
 
             case R.id.menu2:
                 Intent principal = new Intent(CognitionHelp.this, MainActivity.class);
                 startActivity(principal);
+                abertura.pause();
                 break;
             case R.id.menu3:
                 Intent informacoes = new Intent(CognitionHelp.this, Informacoes.class);
                 startActivity(informacoes);
+                abertura.pause();
                 break;
 
         }

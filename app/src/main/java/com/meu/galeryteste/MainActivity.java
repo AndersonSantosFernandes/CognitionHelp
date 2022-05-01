@@ -28,12 +28,13 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.Locale;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
         TextToSpeech falaTexto;
         Context contexto;
-        Button falar;
+        Button falar, duvida, btLimpaCampo;
         EditText textoFalar;
         String recebeTexto ;
 
@@ -46,9 +47,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         falar = findViewById(R.id.falaMain);
         textoFalar = findViewById(R.id.editTextTextPersonName);
         contexto = getApplicationContext();
+        duvida = findViewById(R.id.duvidaMain);
+        btLimpaCampo = findViewById(R.id.buttonLimpar);
 
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -90,6 +94,33 @@ public class MainActivity extends AppCompatActivity {
                 recebeTexto = textoFalar.getText().toString();
 
                 falaTexto.speak(recebeTexto, falaTexto.QUEUE_FLUSH,null);
+            }
+        });
+        duvida.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //*********************diálogo de ajuda
+                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+                dialog.setTitle("Ajuda");
+                dialog.setMessage("Selecione buscar imagem \n escolha uma foto que esteja na mamória e não online. \n" +
+                        "Digite o nome da pessoa ou uma frase com o mesmo, como por exemplo 'Este é seu filho' seguido do nome. \n" +
+                        "Mostre ao paciente e clique em falar \n\n Clicando em limpar, o campo de texto é resetado.");
+                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+                dialog.create();
+                dialog.show();
+                //**********************diálogo de ajuda
+            }
+        });
+
+        btLimpaCampo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textoFalar.setText("");
+                falaTexto.stop();
             }
         });
 
