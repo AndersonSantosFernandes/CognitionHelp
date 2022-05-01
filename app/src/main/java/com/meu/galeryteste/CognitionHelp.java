@@ -48,7 +48,7 @@ public class CognitionHelp extends AppCompatActivity {
                 fundo.setBackgroundResource(R.drawable.anime);
                 break;
         }
-    }
+    }//onCreate
 
 
 
@@ -73,44 +73,45 @@ public class CognitionHelp extends AppCompatActivity {
         });
         dialog.create();
         dialog.show();
-    }
+    }//onBackPressed
     //**************************menu inflavel*********************************************************
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // usamos aqui o inflae para inflar o menu > transformar o menú em uma view
-        // Ir em res e criar u novo dire´torio cchamado menu
+        // usamos aqui o inflar para inflar o menu > transformar o menú em uma view
+        // Ir em res e criar um novo diretorio chamado menu
 
         getMenuInflater().inflate(R.menu.menu_principal,menu);
 
         return super.onCreateOptionsMenu(menu);
-    }
+    }//onCreateOptionsMenu
+
     //onOptionsItemSelected(item) cria um evento de clique para o item selecionado do menú
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {//onOptionsItemSelected
 
         switch (item.getItemId()){
             case R.id.menu0:
-                Intent intent1 = new Intent(CognitionHelp.this, Cores.class);
-                startActivity(intent1);
+                Intent cores = new Intent(CognitionHelp.this, Cores.class);
+                startActivity(cores);
                 break;
 
             case R.id.menu1:
-                Intent intent2 = new Intent(CognitionHelp.this, Falador.class);
-                startActivity(intent2);
+                Intent falador = new Intent(CognitionHelp.this, Falador.class);
+                startActivity(falador);
                 break;
 
             case R.id.menu2:
-                Intent intent3 = new Intent(CognitionHelp.this, MainActivity.class);
-                startActivity(intent3);
+                Intent principal = new Intent(CognitionHelp.this, MainActivity.class);
+                startActivity(principal);
                 break;
             case R.id.menu3:
-                Intent intent4 = new Intent(CognitionHelp.this, Informacoes.class);
-                startActivity(intent4);
+                Intent informacoes = new Intent(CognitionHelp.this, Informacoes.class);
+                startActivity(informacoes);
                 break;
 
         }
         return super.onOptionsItemSelected(item);
-    }
+    }//onOptionsItemSelected
 
 }
     /*public void onPause(){

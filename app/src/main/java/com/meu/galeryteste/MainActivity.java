@@ -8,6 +8,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -17,14 +18,24 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.speech.tts.TextToSpeech;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
+
+        TextToSpeech falaTexto;
+        Context contexto;
+        Button falar;
+        EditText textoFalar;
+        String recebeTexto ;
 
         private ImageView imagem;
         private final int GALERIA_IMAGENS = 1;
@@ -35,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        falar = findViewById(R.id.falaMain);
+        textoFalar = findViewById(R.id.editTextTextPersonName);
+        contexto = getApplicationContext();
 
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -57,7 +71,31 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, GALERIA_IMAGENS);
             }
         });
-    }
+
+        //*********************************************************************************
+
+        falaTexto = new TextToSpeech(contexto, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR){
+                    falaTexto.setLanguage(Locale.getDefault());//selecionada a linguage default do aparelho
+                }
+            }
+        });
+
+        falar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                recebeTexto = textoFalar.getText().toString();
+
+                falaTexto.speak(recebeTexto, falaTexto.QUEUE_FLUSH,null);
+            }
+        });
+
+    }//onCreate
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -73,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
             Bitmap thumbnail = (BitmapFactory.decodeFile(picturePath));
             imagem.setImageBitmap(thumbnail);
         }
-    }
+    }//onActivityResult
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
@@ -88,5 +126,5 @@ public class MainActivity extends AppCompatActivity {
             }
             return;
         }
-    }
+    }//onRequestPermissionsResult
    }

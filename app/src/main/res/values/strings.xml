@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">GaleryTeste</string>
     <string name="buscar">Buscar Imagem</string>
-    <string name="salvar">Salvar Imagem</string>
+    <string name="salvar">Falar</string>
     <string name="sorteio">Sortear cor</string>
     <string name="btFalar">Falar</string>
     <string name="limpar">Limpar texto</string>
     <string name="tituloTelaFalador">Digite o que quer ouvir</string>
+    <string name="tituloFotos">Fale foto</string>
+    <string name="textoFalar">Escreva o que quer transmitir</string>
     <string name="sobreAlzheimer">
         Estratégias para lidar com um doente de Alzheimer
 Cuidar de uma pessoa com Doença de Alzheimer pode tornar-se uma tarefa muito desafiadora e desgastante. É importante ter em consideração que as perdas cognitivas (perdas de memória, orientação espacial e temporal, linguagem, capacidade de raciocínio, concentração, entre outras) têm impacto na maneira como a pessoa vive e se relaciona.
