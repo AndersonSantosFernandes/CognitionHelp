@@ -21,15 +21,11 @@ public class Cores extends AppCompatActivity {
 
     Button sorteia,btVerde,btAmarelo,btRosa,btVermelho,btAzul,btMarrom,btPreto,btCinza, duvida;
     int sorteado, adivinhado;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cores);
         Objects.requireNonNull(getSupportActionBar()).hide();
-
 
         String verde, amarelo, rosa, vermelho, azul,marrom, preto, cinza, acertar, errar;
 
@@ -66,7 +62,6 @@ public class Cores extends AppCompatActivity {
         sorteia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Random random = new Random();
                 int cores;
                 cores = random.nextInt(8);
@@ -104,9 +99,7 @@ public class Cores extends AppCompatActivity {
                         sorteado = 0;
                         break;
                }
-
             }
-
         });
         //********************cores***************
         btVerde.setOnClickListener(new View.OnClickListener() {
