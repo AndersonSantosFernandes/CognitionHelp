@@ -28,7 +28,8 @@
             app:layout_constraintTop_toBottomOf="@+id/tituloMain"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/botoes"
             android:id="@+id/btnImage"
             android:layout_width="fill_parent"
             android:layout_height="47dp"
@@ -36,9 +37,12 @@
             android:text="@string/buscar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivImagem" />
+            app:layout_constraintTop_toBottomOf="@+id/ivImagem"
 
-        <Button
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/botoes"
             android:id="@+id/falaMain"
             android:layout_width="fill_parent"
             android:layout_height="44dp"
@@ -73,7 +77,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/botoes"
             android:id="@+id/buttonLimpar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -84,6 +89,7 @@
             app:layout_constraintTop_toBottomOf="@+id/falaMain" />
 
         <androidx.appcompat.widget.AppCompatButton
+
             android:id="@+id/duvidaMain"
             android:layout_width="60dp"
             android:layout_height="60dp"
