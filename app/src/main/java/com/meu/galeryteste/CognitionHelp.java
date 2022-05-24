@@ -19,12 +19,13 @@ public class CognitionHelp extends AppCompatActivity {
     private ScrollView fundo;
     private MediaPlayer abertura;
              ImageView pPause;
+             Button duvida;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cognition_help);
 
-
+         duvida = findViewById(R.id.duvidaCognition);
          pPause = findViewById(R.id.playPause);
          abertura = MediaPlayer.create(this, R.raw.audio1);
          abertura.start();
@@ -66,6 +67,25 @@ public class CognitionHelp extends AppCompatActivity {
                 fundo.setBackgroundResource(R.drawable.anime);
                 break;
         }
+
+        duvida.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //*********************diálogo de ajuda
+                AlertDialog.Builder dialog = new AlertDialog.Builder(CognitionHelp.this);
+                dialog.setTitle("Ajuda");
+                dialog.setMessage("Selecione as opções no menú situado na barra superior e escolha a tela desejada...");
+                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+                dialog.create();
+                dialog.show();
+                //**********************diálogo de ajuda
+            }
+        });
+
     }//onCreate
 
 

@@ -23,13 +23,26 @@
         android:layout_marginStart="299dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="42dp"
-        android:background="@color/cardview_light_background"
-        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:background="@color/teal_200"
+        android:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_play" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/duvidaCognition"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="577dp"
+        android:layout_marginEnd="176dp"
+        android:background="@drawable/interrogacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
