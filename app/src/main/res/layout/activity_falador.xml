@@ -27,10 +27,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/limpaTexto" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        style="@style/botoes"
         android:gravity="center"
         android:text="@string/tituloTelaFalador"
         android:textColor="@color/white"
