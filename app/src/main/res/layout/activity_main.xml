@@ -62,7 +62,9 @@
             android:inputType="textMultiLine|textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnImage" />
+            app:layout_constraintTop_toBottomOf="@+id/btnImage"
+            android:padding="5dp"
+            />
 
         <TextView
             android:id="@+id/tituloMain"
@@ -78,8 +80,9 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/botoes"
+
             android:id="@+id/buttonLimpar"
+            style="@style/botoes"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
