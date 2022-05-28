@@ -3,5 +3,8 @@
     <style name="botoes">
         <item name="android:background">@drawable/gradiente</item>
     </style>
+    <style name="back">
+        <item name="android:background">@drawable/fundo</item>
+    </style>
 
 </resources>
